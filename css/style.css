@@ -1,0 +1,15 @@
+body{
+    background-image: url('../images/background.jpg')
+}
+#main{
+    margin:0, auto;
+    text-align: center;
+}
+
+#main_header{
+    color: rgb(207, 204, 204);
+    font-family: Arial, Helvetica, sans-serif;
+}
+#canvas{
+    border:5px solid rgb(207, 204, 204);
+}
