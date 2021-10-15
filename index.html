@@ -2,16 +2,43 @@
 <html>
     <head lang="en">
         <meta charset="utf-8">
-        <title>Battling Bacteria</title>
+        <title>Bacteria Blaster</title>
         <link rel="stylesheet" href="css/style.css">
-        <script type="text/javascript" src="script/game.js"></script>
+        <script type="text/javascript" src="javascript/game.js"></script>
+        <script type="text/javascript" src="./common/webgl-utils.js"></script> 
     </head>
     <body>
+        <script id="vertex-shader" type="not-javascript">
+            precision mediump float;
+
+            attribute vec2 vertPosition;
+            
+            void main(){
+                gl_Position = vec4(vertPosition,0.0,1.0);
+            }
+        </script>
+        <script id="fragment-shader" type="not-javascript">
+            precision mediump float;
+            uniform vec4 fColor;
+            void main(){
+                gl_FragColor = fColor;
+            }
+        </script>
         <div id="main">
             <h1 id="main_header"> Bacteria Blaster </h1>
-            <canvas id="canvas" width="800" height="800">
+            <canvas id="canvas">
                 Oops ... your browser doesn't support the HTML5 canvas element
             </canvas>
+            <div id="scoreboard">
+                <p>
+                    <span class="points" id="score"></span>
+                    
+                    <img class="health" id="life1" src="./images/heart.png" alt="heart"/> 
+                    <img class="health" id="life2" src="./images/heart.png" alt="heart"/>
+                    
+                    <span class="points" id="bacLeft"></span>
+                </p>   
+            </div>
         </div>
     </body>
 </html>
