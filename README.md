@@ -5,3 +5,8 @@
 Game made using web gl. 
 
 To play download source code and run index.html
+
+
+## How the game works
+
+![alt text](http://)
